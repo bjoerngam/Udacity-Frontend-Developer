@@ -1,0 +1,104 @@
+h1, h2{
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+h2{
+  font-size: 15px;
+}
+
+h1{
+  font-size: 48px;
+}
+
+ h4{
+  font-size: 24px;
+  color: #7d97ad;
+}
+
+/*Header styling */
+header {
+  font-family: Cinzel;
+}
+
+header .container{
+  max-width: 980px;
+  display: flex;
+  position: relative;
+}
+
+header .leftSection{
+  width: 30%;
+  float: left;
+}
+
+header .rightSection{
+  width: 90%;
+  float: right;
+  text-align: right;
+}
+
+header .line{
+  border-bottom: solid 4px #7d97ad;
+  width:100%;
+}
+
+header .author{
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+header .description{
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.container {
+  max-width:980px;
+  margin: 0 auto;
+  padding:10px 20px;
+}
+
+container .main_image{
+    padding-top: 5px;
+}
+
+/* Projects */
+#project {
+  display: flex;
+  padding-left: 10px;
+  text-align: left;
+  font-family: Cinzel;
+}
+
+#project .single-project{
+    width: 60%;
+}
+
+#project .project-text{
+  font-size: 18px;
+  color: #2d3c49;
+}
+
+#project p{
+  font-size: 12px;
+}
+
+#project .single-project h3{
+  font-size: 18px;
+  color: #2d3c49;
+}
+
+@media screen and (max-width: 600px)  {
+  .main_image, .line, .leftSection {
+    display: none;
+  }
+
+  h4{
+   font-size: 50px;
+  }
+  #project{
+    padding-left: 10px;
+    flex-wrap: wrap;
+  }
+}
