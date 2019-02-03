@@ -29,12 +29,10 @@ header .container{
 
 header .leftSection{
   width: 30%;
-  float: left;
 }
 
 header .rightSection{
   width: 90%;
-  float: right;
   text-align: right;
 }
 
