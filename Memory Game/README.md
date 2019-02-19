@@ -23,6 +23,7 @@ https://review.udacity.com/#!/rubrics/591/view
 ## APIs:
 
 https://jquery.com/
+
 https://getbootstrap.com/
 
 And the Google Fonts:
@@ -37,9 +38,3 @@ The complete project is based on three files:
 3. The JS file
 
 Please check the JS file how every method works.
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
