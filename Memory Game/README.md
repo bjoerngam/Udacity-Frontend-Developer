@@ -7,11 +7,36 @@
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+It is a classical concentration game. (Don't play it against kids you will lose).
+We have 8x2 covered cards and you have to find the pairs (two bikes for examples). Try to solve
+the classical puzzle game as fast as possible.
 
-To get started, open `js/app.js` and start building out the app's functionality
+You can find here more information about classical concentration games:
+https://en.wikipedia.org/wiki/Concentration_(game)
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+The games is based on the Udacity GIT repro:
+https://github.com/udacity/fend-project-memory-game
+
+And has to fullfil this rubric:
+https://review.udacity.com/#!/rubrics/591/view
+
+## APIs:
+
+https://jquery.com/
+https://getbootstrap.com/
+
+And the Google Fonts:
+https://fonts.google.com/
+
+## General:
+
+The complete project is based on three files:
+
+1. The HTML file
+2. The CSS file
+3. The JS file
+
+Please check the JS file how every method works.
 
 ## Contributing
 
