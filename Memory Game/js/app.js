@@ -1,29 +1,28 @@
-cardNames = ['diamond', 'paper-plane-o', 'anchor',
-'bolt', 'cube', 'leaf', 'bomb', 'bicycle','diamond', 'paper-plane-o', 'anchor',
-'bolt', 'cube', 'leaf', 'bomb', 'bicycle']
+cardNames = ['diamond', 'paper-plane-o', 'anchor', 'bolt', 'cube', 'leaf', 'bomb', 'bicycle']
+cardNames = cardNames.concat(cardNames);
 
-//setup the basic variables
-var moves = 0; // number of  moves
-var matched = 0; // number of pairs
-var openCards = []; // number of flipped cards
-var matchedCards = []; // number of matched cards
-var seconds = 0; // number of seconds
-var minutes = 0; // number of minutes
-var timer;
-var remainingStars = $(".stars li").length;
-var stars = 3;
+//setup the basic letiables
+let moves = 0; // number of  moves
+let matched = 0; // number of pairs
+let openCards = []; // number of flipped cards
+let matchedCards = []; // number of matched cards
+let seconds = 0; // number of seconds
+let minutes = 0; // number of minutes
+let timer;
+let remainingStars = $(".stars li").length;
+let stars = 3;
 
 function shuffleCards() {
 	// shuffles cards and creates html for each card
 	shuffle(cardNames)
 	cardNames.forEach(function(card) {
-		var cardElem = '<li class="card"><i class="fa fa-' + card + '"></i></li>';
+		let cardElem = '<li class="card"><i class="fa fa-' + card + '"></i></li>';
 		$(".deck").append(cardElem);
 	});
 }
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -96,10 +95,13 @@ function restartGame() {
 	// resets the game. Hides all the cards, and ets all the counts back to zero.
 	$(".restart").click(function() {
 		$(".card").remove();
+		openCards = [];
 		shuffleCards();
 		flip();
 		clearInterval(timer);
 		moves = 0;
+		$(".moves").html(moves);
+		$(".timer").html(minutes + "m " + seconds + "s");
 		matched = 0;
 		seconds = 0;
 		minutes = 0;
@@ -108,7 +110,7 @@ function restartGame() {
 		startTimer();
 		$(".card").removeClass('match');
 		$(".card").removeClass('open show');
-		var remainingStars = $(".stars li").length;
+		let remainingStars = $(".stars li").length;
 		while (remainingStars < 3) { // Adding the stars back in the star-rating.
 			$(".stars").append('<li><i class="fa fa-star"></i></li>');
 			remainingStars++;
@@ -127,7 +129,7 @@ function restartFromModal() {
 	startTimer();
 	$(".card").removeClass('match');
 	$(".card").removeClass('open show');
-	var remainingStars = $(".stars li").length;
+	let remainingStars = $(".stars li").length;
 	while (remainingStars < 3) { // Adding the stars back in the star-rating.
 		$(".stars").append('<li><i class="fa fa-star"></i></li>');
 		remainingStars++;
@@ -167,4 +169,5 @@ function startGame() {
 	flip();
 	restartGame();
 }
+
 startGame();
